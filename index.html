@@ -9,7 +9,23 @@
     <div id = "container"></div>
     <script>
         const statement = 'my name is';
-        document.getElementById('container').innerHTML = statement;     
+        document.getElementById('container').innerHTML = statement;   
+
+        class Car {
+            constructor(name, description, color) {
+                this.name = name;
+                this.description = description;
+                this.color = color;
+            }
+
+            showCar() {
+                console.log(`The name of my car is ${this.name}, description is ${this.description} and color is ${this.color}`);
+            }
+        }
+
+        const myCar = new Car('toyota', 'sedan', 'blue');
+        myCar.showCar();
+       
     </script>
 </body>
 </html>
