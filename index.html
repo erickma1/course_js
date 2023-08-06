@@ -26,6 +26,13 @@
         const myCar = new Car('toyota', 'sedan', 'blue');
         myCar.showCar();
        
+        const myArray = ['Eric', 'Akosua', 'Yaa'];
+        localStorage.setItem('myTenants', JSON.stringify(myArray));
+
+        const names  = JSON.parse(localStorage.getItem('myTenants'));
+        console.log(names[2]);
+        
+
     </script>
 </body>
 </html>
