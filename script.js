@@ -21,7 +21,7 @@ if (userData != undefined) {
 
 /* eslint no-unused-vars: "off" */ /* eslint eqeqeq: "off" */
 function deleteItem(id) {
-  // console.log(id);
+
   const filteredArray = userData.filter((e) => e.id != id);
   localStorage.setItem('formdata', JSON.stringify(filteredArray));
 }
@@ -46,9 +46,9 @@ function fetchBooks() {
       title: title.value,
       author: author.value,
     };
-    // console.log(userData);
+  
     userData.push(formData);
-    // console.log(userData);
+  
     localStorage.setItem('formdata', JSON.stringify(userData));
   });
 }
