@@ -25,22 +25,21 @@
                 console.log(`The name of my car is ${this.name}, description is ${this.description} and color is ${this.color}`);
             }
         }
-
+       
         const myCar = new Car('toyota', 'sedan', 'blue');
         myCar.showCar();
-       
-        const myArray = ['Eric', 'Akosua', 'Yaa'];
-        localStorage.setItem('myTenants', JSON.stringify(myArray));
 
-        const names  = JSON.parse(localStorage.getItem('myTenants'));
-        console.log(names[2]);
+        const kofSchools = ['SDA', 'NKB', 'Pentecost'];
+        localStorage.setItem('koforiduaSchools', JSON.stringify(kofSchools));
+        const seeSchools  = JSON.parse(localStorage.getItem('koforiduaSchools'));       
+
 
         function changetxt(){
             document.getElementById('container').innerHTML = 'my name is new!';
         }
 
        function changeSummary(){
-            document.getElementById('mySummary').innerHTML = 'Today i completed my project!';
+            document.getElementById('mySummary').innerHTML = seeSchools;
        }
 
       </script>
