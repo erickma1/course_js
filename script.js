@@ -21,7 +21,6 @@ if (userData != undefined) {
 
 /* eslint no-unused-vars: "off" */ /* eslint eqeqeq: "off" */
 function deleteItem(id) {
-
   const filteredArray = userData.filter((e) => e.id != id);
   localStorage.setItem('formdata', JSON.stringify(filteredArray));
 }
@@ -46,16 +45,10 @@ function fetchBooks() {
       title: title.value,
       author: author.value,
     };
-  
+
     userData.push(formData);
-  
     localStorage.setItem('formdata', JSON.stringify(userData));
   });
 }
 
 fetchBooks();
-
-add.addEventListener('click', () => {
-  books.classList.add('hide');
-  form.classList.add('show');
-});
